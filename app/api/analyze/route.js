@@ -1,4 +1,5 @@
-// app/api/analyze/route.js
+export const maxDuration = 30; // This function can run for a maximum of 5 seconds
+export const dynamic = 'force-dynamic';
 import { OpenAI } from 'openai';
 
 const openai = new OpenAI({
