@@ -116,7 +116,7 @@ const ReadingPage = ({ params: paramsPromise }) => {
   }
 
   return (
-    <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900 text-gray-100' : 'bg-white text-gray-900'}`}>
+    <div className={`min-h-screen flex flex-col ${theme === 'dark' ? 'bg-gray-900 text-gray-100' : 'bg-white text-gray-900'}`}>
   
     <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50">
       <Sheet>
@@ -131,7 +131,7 @@ const ReadingPage = ({ params: paramsPromise }) => {
 
         <SheetContent 
           side="right" 
-          className="w-full max-w-2xl p-6 bg-background overflow-y-auto"
+          className="w-full max-w-2xl p-4 md:p-6 bg-background overflow-y-auto"
         >
           <VisuallyHidden>
             <SheetTitle>Book Analysis</SheetTitle>
@@ -204,21 +204,21 @@ const ReadingPage = ({ params: paramsPromise }) => {
       </div>
     </header>
 
-    <main className="max-w-3xl mx-auto px-4 md:px-6 py-8">
-      <article 
-        className={`prose dark:prose-invert max-w-none 
-          bg-white dark:bg-gray-800/50 p-6 md:p-8 rounded-lg shadow-sm
-          border border-gray-200 dark:border-gray-700`}
-        style={{ 
-          fontSize: `${fontSize}px`,
-          lineHeight: '1.6',
-          letterSpacing: '0.015em',
-          wordBreak: 'break-word'
-        }}
-      >
-        {book.content}
-      </article>
-    </main>
+    <main className="max-w-3xl mx-auto px-4 md:px-6 py-8 flex-1 w-full overflow-y-auto">
+    <article 
+      className={`prose dark:prose-invert max-w-none 
+        bg-white dark:bg-gray-800/50 p-6 md:p-8 rounded-lg shadow-sm
+        border border-gray-200 dark:border-gray-700`}
+      style={{ 
+        fontSize: `${fontSize}px`,
+        lineHeight: '1.6',
+        letterSpacing: '0.015em',
+        wordBreak: 'break-word'
+      }}
+    >
+      {book.content}
+    </article>
+  </main>
   </div>
   );
 };
