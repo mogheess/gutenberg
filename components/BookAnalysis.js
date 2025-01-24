@@ -53,7 +53,7 @@ export const BookAnalysis = ({ bookContent }) => {
 
   return (
     <div className="bg-background rounded-xl shadow-sm border border-border p-6">
-      <div className="flex gap-2 mb-6 overflow-x-auto">
+      <div className="flex gap-2 pb-4 mb-4 overflow-x-auto scrollbar-hide">
         <AnalysisTab
           type="summary"
           icon={<BookOpen className="w-5 h-5" />}

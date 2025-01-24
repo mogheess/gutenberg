@@ -131,7 +131,7 @@ const ReadingPage = ({ params: paramsPromise }) => {
 
         <SheetContent 
           side="right" 
-          className="w-full max-w-xl p-6 bg-background overflow-y-auto"
+          className="w-full max-w-2xl p-6 bg-background overflow-y-auto"
         >
           <VisuallyHidden>
             <SheetTitle>Book Analysis</SheetTitle>

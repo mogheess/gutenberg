@@ -70,3 +70,21 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes scroll-indicator {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+.scroll-gradient::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, var(--background) 100%);
+  pointer-events: none;
+  animation: scroll-indicator 2s infinite;
+}
