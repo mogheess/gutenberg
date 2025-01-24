@@ -47,7 +47,6 @@ export const SearchDialog = ({ searchResult, searchQuery, onClose, onReadBook })
                 Read Book
               </Button>
 
-              <BookAnalysis bookContent={searchResult.content} />
             </div>
           )
         )}
