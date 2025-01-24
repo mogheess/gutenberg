@@ -8,12 +8,15 @@ const Navbar = () => {
       <div className="flex items-center justify-between">
     
         <div className="flex items-center space-x-2">
-         <span className="font-bold text-xl text-gray-900">Gutenberg Explorer</span>
+         <span className="font-bold text-xl text-gray-900">Project Gutenberg</span>
         </div>
         <nav className="hidden md:flex items-center space-x-8">
-          <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
-            Get Started
-          </button>
+          <Link href="/dashboard">
+              <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+                Get Started
+              </button>
+          </Link>
+         
         </nav>
       </div>
     </div>
