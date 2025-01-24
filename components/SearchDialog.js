@@ -7,6 +7,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { BookAnalysis } from '@/components/BookAnalysis';
 
 export const SearchDialog = ({ searchResult, searchQuery, onClose, onReadBook }) => {
   return (
@@ -45,6 +46,8 @@ export const SearchDialog = ({ searchResult, searchQuery, onClose, onReadBook })
               >
                 Read Book
               </Button>
+
+              <BookAnalysis bookContent={searchResult.content} />
             </div>
           )
         )}

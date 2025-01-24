@@ -1,4 +1,3 @@
-
 import { NextResponse } from 'next/server';
 
 export async function GET(request, context) {
@@ -20,8 +19,7 @@ export async function GET(request, context) {
       : 'Unknown Author';
     const coverUrl = 
       metadata.formats['image/jpeg'] || 
-      metadata.formats['image/png'] || 
-      'https://via.placeholder.com/150?text=Book+Cover';
+      metadata.formats['image/png']
     const contentUrl = metadata.formats['text/plain; charset=us-ascii'] || 
                        `https://www.gutenberg.org/cache/epub/${id}/pg${id}.txt`;
     

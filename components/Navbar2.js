@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabase';
 import { SearchDialog } from '@/components/SearchDialog';
+import Link from 'next/link';
 
 export const Navbar2 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -73,9 +74,12 @@ export const Navbar2 = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             <div className="flex-shrink-0">
-              <span className="text-xl md:text-2xl font-semibold cursor-pointer">
-                ProjectGutenberg
-              </span>
+              <Link href="/">
+                <span className="text-xl md:text-2xl font-semibold cursor-pointer">
+                  ProjectGutenberg
+                </span>
+              </Link>
+             
             </div>
 
             <button
