@@ -34,14 +34,14 @@ const Hero = () => {
     <div className="relative py-4">
       <input 
         type="text"
-        placeholder="Enter a book ID or search by title..."
+        placeholder="Search by book ID or search by title..."
         className="w-full px-6 py-4 rounded-xl border bg-white/80 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-indigo-600"
       />
       <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
     </div>
     <Link href="/dashboard">
   <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
-        Search Now
+        Get Started
   </button>
   </Link>
   </motion.div>
