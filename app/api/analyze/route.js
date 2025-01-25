@@ -3,8 +3,7 @@ export const dynamic = 'force-dynamic';
 import { OpenAI } from 'openai';
 
 const openai = new OpenAI({
-  baseURL: 'https://api.deepseek.com',
-  apiKey: process.env.DEEPSEEKER_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 export async function POST(request) {
@@ -32,7 +31,7 @@ export async function POST(request) {
     }
 
     const completion = await openai.chat.completions.create({
-      model: 'deepseek-chat',
+      model: 'gpt-4o-mini',
       messages: [
         {
           role: 'system',
